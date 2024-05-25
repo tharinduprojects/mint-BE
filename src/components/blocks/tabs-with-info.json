@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_tabs_with_infos",
+  "info": {
+    "displayName": "Tabs With Info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tabItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.tab-item"
+    }
+  }
+}

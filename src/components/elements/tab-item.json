@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_elements_tab_items",
+  "info": {
+    "displayName": "Tab Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tabTitle": {
+      "type": "string"
+    },
+    "contentHeading": {
+      "type": "string"
+    },
+    "contentDescription": {
+      "type": "text"
+    },
+    "tabListFeatures": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list-item"
+    },
+    "tabMediaImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tabIcon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tabCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    }
+  }
+}

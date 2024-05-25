@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_image_with_accordians",
+  "info": {
+    "displayName": "Image With Accordian",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionDescription": {
+      "type": "text"
+    },
+    "sectionImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "accordianItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.accordion-item"
+    }
+  }
+}

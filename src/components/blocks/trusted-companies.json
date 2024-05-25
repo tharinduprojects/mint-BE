@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_trusted_companies",
+  "info": {
+    "displayName": "Trusted Companies"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
