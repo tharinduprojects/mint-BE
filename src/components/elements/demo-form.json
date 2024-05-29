@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_elements_demo_forms",
+  "info": {
+    "displayName": "Demo Form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "formTitle": {
+      "type": "string"
+    },
+    "formDescription": {
+      "type": "text"
+    },
+    "formButton": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.button-link"
+    },
+    "formBackDrop": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

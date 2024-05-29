@@ -27,6 +27,13 @@
     },
     "author": {
       "type": "string"
+    },
+    "backDrop": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

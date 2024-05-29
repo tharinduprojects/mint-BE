@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_left_image_and_infos",
+  "info": {
+    "displayName": "Left Image & Info",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "leftMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "descripion": {
+      "type": "text"
+    },
+    "bgColor": {
+      "type": "string"
+    }
+  }
+}

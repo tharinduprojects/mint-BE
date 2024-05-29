@@ -384,7 +384,10 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
         'blocks.trusted-companies',
         'blocks.image-with-accordian',
         'blocks.cta-section',
-        'blocks.tabs-with-info'
+        'blocks.tabs-with-info',
+        'blocks.left-image-and-info',
+        'blocks.best-place-caraousel',
+        'blocks.shedule-a-demo'
       ]
     >;
     createdAt: Attribute.DateTime;

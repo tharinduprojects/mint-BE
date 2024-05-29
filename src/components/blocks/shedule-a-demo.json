@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_shedule_a_demos",
+  "info": {
+    "displayName": "Shedule a Demo"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "demoForm": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.demo-form"
+    }
+  }
+}
