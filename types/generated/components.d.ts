@@ -70,6 +70,19 @@ export interface BlocksLeftImageAndInfo extends Schema.Component {
   };
 }
 
+export interface BlocksNewsLetterSubscribe extends Schema.Component {
+  collectionName: 'components_blocks_news_letter_subscribes';
+  info: {
+    displayName: 'News Letter Subscribe';
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Text;
+    formButton: Attribute.Component<'elements.button-link'>;
+    sectionBackdrop: Attribute.Media;
+  };
+}
+
 export interface BlocksSheduleADemo extends Schema.Component {
   collectionName: 'components_blocks_shedule_a_demos';
   info: {
@@ -101,6 +114,18 @@ export interface BlocksTrustedCompanies extends Schema.Component {
   attributes: {
     title: Attribute.String;
     logo: Attribute.Media;
+  };
+}
+
+export interface CommonFooter extends Schema.Component {
+  collectionName: 'components_common_footers';
+  info: {
+    displayName: 'footer';
+  };
+  attributes: {
+    footerLogo: Attribute.Media;
+    footerDescription: Attribute.Text;
+    footerMenuCol: Attribute.Component<'elements.footer-menu-col', true>;
   };
 }
 
@@ -141,6 +166,18 @@ export interface ElementsDemoForm extends Schema.Component {
     formDescription: Attribute.Text;
     formButton: Attribute.Component<'elements.button-link', true>;
     formBackDrop: Attribute.Media;
+  };
+}
+
+export interface ElementsFooterMenuCol extends Schema.Component {
+  collectionName: 'components_elements_footer_menu_cols';
+  info: {
+    displayName: 'Footer Menu Col';
+    description: '';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuItem: Attribute.Component<'elements.text-link', true>;
   };
 }
 
@@ -185,6 +222,18 @@ export interface ElementsTabItem extends Schema.Component {
   };
 }
 
+export interface ElementsTextLink extends Schema.Component {
+  collectionName: 'components_elements_text_links';
+  info: {
+    displayName: 'Text Link';
+  };
+  attributes: {
+    title: Attribute.String;
+    url: Attribute.String;
+    isExternal: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface SeoMetaData extends Schema.Component {
   collectionName: 'components_seo_meta_data';
   info: {
@@ -205,15 +254,19 @@ declare module '@strapi/types' {
       'blocks.hero': BlocksHero;
       'blocks.image-with-accordian': BlocksImageWithAccordian;
       'blocks.left-image-and-info': BlocksLeftImageAndInfo;
+      'blocks.news-letter-subscribe': BlocksNewsLetterSubscribe;
       'blocks.shedule-a-demo': BlocksSheduleADemo;
       'blocks.tabs-with-info': BlocksTabsWithInfo;
       'blocks.trusted-companies': BlocksTrustedCompanies;
+      'common.footer': CommonFooter;
       'elements.accordion-item': ElementsAccordionItem;
       'elements.button-link': ElementsButtonLink;
       'elements.demo-form': ElementsDemoForm;
+      'elements.footer-menu-col': ElementsFooterMenuCol;
       'elements.list-item': ElementsListItem;
       'elements.slider-item': ElementsSliderItem;
       'elements.tab-item': ElementsTabItem;
+      'elements.text-link': ElementsTextLink;
       'seo.meta-data': SeoMetaData;
     }
   }

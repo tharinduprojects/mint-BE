@@ -37,7 +37,8 @@
         "blocks.tabs-with-info",
         "blocks.left-image-and-info",
         "blocks.best-place-caraousel",
-        "blocks.shedule-a-demo"
+        "blocks.shedule-a-demo",
+        "blocks.news-letter-subscribe"
       ]
     }
   }

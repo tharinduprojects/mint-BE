@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_text_links",
+  "info": {
+    "displayName": "Text Link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

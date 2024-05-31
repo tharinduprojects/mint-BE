@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_common_footers",
+  "info": {
+    "displayName": "footer"
+  },
+  "options": {},
+  "attributes": {
+    "footerLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "footerDescription": {
+      "type": "text"
+    },
+    "footerMenuCol": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.footer-menu-col"
+    }
+  }
+}

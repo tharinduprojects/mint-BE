@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_footer_menu_cols",
+  "info": {
+    "displayName": "Footer Menu Col",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "string"
+    },
+    "menuItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.text-link"
+    }
+  }
+}
