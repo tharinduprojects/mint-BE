@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_hero_centereds",
+  "info": {
+    "displayName": "Hero Centered"
+  },
+  "options": {},
+  "attributes": {
+    "smallText": {
+      "type": "string"
+    },
+    "titleText": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

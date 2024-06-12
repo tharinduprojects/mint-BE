@@ -794,12 +794,14 @@ export interface ApiFooterFooter extends Schema.SingleType {
     singularName: 'footer';
     pluralName: 'footers';
     displayName: 'Footer';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     mintFooter: Attribute.Component<'common.footer'>;
+    copyrightText: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -865,6 +867,55 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiWeAreWeAre extends Schema.CollectionType {
+  collectionName: 'we_ares';
+  info: {
+    singularName: 'we-are';
+    pluralName: 'we-ares';
+    displayName: 'We Are';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.Text;
+    Slug: Attribute.UID<'api::we-are.we-are', 'Title'>;
+    metaData: Attribute.Component<'seo.meta-data'>;
+    Blocks: Attribute.DynamicZone<
+      [
+        'blocks.best-place-caraousel',
+        'blocks.centered-text-desc-bg-image',
+        'blocks.cta-section',
+        'blocks.hero-centered',
+        'blocks.hero',
+        'blocks.image-with-accordian',
+        'blocks.left-image-and-info',
+        'blocks.news-letter-subscribe',
+        'blocks.shedule-a-demo',
+        'blocks.tabs-with-info',
+        'blocks.trusted-companies'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::we-are.we-are',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::we-are.we-are',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -885,6 +936,7 @@ declare module '@strapi/types' {
       'plugin::i18n.locale': PluginI18NLocale;
       'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::we-are.we-are': ApiWeAreWeAre;
     }
   }
 }

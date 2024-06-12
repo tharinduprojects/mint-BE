@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_centered_text_desc_bg_images",
+  "info": {
+    "displayName": "Centered Text Desc Bg Image"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backDrop": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "bgColor": {
+      "type": "string"
+    }
+  }
+}

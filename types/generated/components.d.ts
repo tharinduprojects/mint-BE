@@ -14,6 +14,19 @@ export interface BlocksBestPlaceCaraousel extends Schema.Component {
   };
 }
 
+export interface BlocksCenteredTextDescBgImage extends Schema.Component {
+  collectionName: 'components_blocks_centered_text_desc_bg_images';
+  info: {
+    displayName: 'Centered Text Desc Bg Image';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    backDrop: Attribute.Media;
+    bgColor: Attribute.String;
+  };
+}
+
 export interface BlocksCtaSection extends Schema.Component {
   collectionName: 'components_blocks_cta_sections';
   info: {
@@ -23,6 +36,18 @@ export interface BlocksCtaSection extends Schema.Component {
     heading: Attribute.String;
     buttonLink: Attribute.Component<'elements.button-link'>;
     backgroundImage: Attribute.Media;
+  };
+}
+
+export interface BlocksHeroCentered extends Schema.Component {
+  collectionName: 'components_blocks_hero_centereds';
+  info: {
+    displayName: 'Hero Centered';
+  };
+  attributes: {
+    smallText: Attribute.String;
+    titleText: Attribute.String;
+    image: Attribute.Media;
   };
 }
 
@@ -126,6 +151,7 @@ export interface CommonFooter extends Schema.Component {
     footerLogo: Attribute.Media;
     footerDescription: Attribute.Text;
     footerMenuCol: Attribute.Component<'elements.footer-menu-col', true>;
+    socialMedia: Attribute.Component<'elements.social-icon-item', true>;
   };
 }
 
@@ -205,6 +231,18 @@ export interface ElementsSliderItem extends Schema.Component {
   };
 }
 
+export interface ElementsSocialIconItem extends Schema.Component {
+  collectionName: 'components_elements_social_icon_items';
+  info: {
+    displayName: 'Social Icon Item';
+  };
+  attributes: {
+    title: Attribute.String;
+    url: Attribute.String;
+    iconImage: Attribute.Media;
+  };
+}
+
 export interface ElementsTabItem extends Schema.Component {
   collectionName: 'components_elements_tab_items';
   info: {
@@ -250,7 +288,9 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'blocks.best-place-caraousel': BlocksBestPlaceCaraousel;
+      'blocks.centered-text-desc-bg-image': BlocksCenteredTextDescBgImage;
       'blocks.cta-section': BlocksCtaSection;
+      'blocks.hero-centered': BlocksHeroCentered;
       'blocks.hero': BlocksHero;
       'blocks.image-with-accordian': BlocksImageWithAccordian;
       'blocks.left-image-and-info': BlocksLeftImageAndInfo;
@@ -265,6 +305,7 @@ declare module '@strapi/types' {
       'elements.footer-menu-col': ElementsFooterMenuCol;
       'elements.list-item': ElementsListItem;
       'elements.slider-item': ElementsSliderItem;
+      'elements.social-icon-item': ElementsSocialIconItem;
       'elements.tab-item': ElementsTabItem;
       'elements.text-link': ElementsTextLink;
       'seo.meta-data': SeoMetaData;
