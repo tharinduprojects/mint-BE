@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_m_int_hrm_numbers",
+  "info": {
+    "displayName": "MIntHrm Numbers",
+    "icon": "clock",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "mintNumbers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.mint-number-item"
+    },
+    "bgColor": {
+      "type": "string"
+    },
+    "backDrop": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

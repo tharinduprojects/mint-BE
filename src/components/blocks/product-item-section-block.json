@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_product_item_section_blocks",
+  "info": {
+    "displayName": "Product Item Section Block"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

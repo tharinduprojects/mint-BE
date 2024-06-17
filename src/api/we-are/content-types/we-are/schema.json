@@ -40,7 +40,10 @@
         "blocks.news-letter-subscribe",
         "blocks.shedule-a-demo",
         "blocks.tabs-with-info",
-        "blocks.trusted-companies"
+        "blocks.trusted-companies",
+        "blocks.our-key-clients",
+        "blocks.hero-we-are",
+        "blocks.m-int-hrm-numbers"
       ]
     }
   }

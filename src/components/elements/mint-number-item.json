@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_mint_number_items",
+  "info": {
+    "displayName": "mintNumberItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    }
+  }
+}

@@ -788,6 +788,38 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiDemoAndNewsletterDemoAndNewsletter
+  extends Schema.SingleType {
+  collectionName: 'demo_and_newsletters';
+  info: {
+    singularName: 'demo-and-newsletter';
+    pluralName: 'demo-and-newsletters';
+    displayName: 'Demo and Newsletter';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    demo: Attribute.Component<'blocks.shedule-a-demo'>;
+    newsLetter: Attribute.Component<'blocks.news-letter-subscribe'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::demo-and-newsletter.demo-and-newsletter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::demo-and-newsletter.demo-and-newsletter',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -895,7 +927,10 @@ export interface ApiWeAreWeAre extends Schema.CollectionType {
         'blocks.news-letter-subscribe',
         'blocks.shedule-a-demo',
         'blocks.tabs-with-info',
-        'blocks.trusted-companies'
+        'blocks.trusted-companies',
+        'blocks.our-key-clients',
+        'blocks.hero-we-are',
+        'blocks.m-int-hrm-numbers'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -934,6 +969,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::demo-and-newsletter.demo-and-newsletter': ApiDemoAndNewsletterDemoAndNewsletter;
       'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::we-are.we-are': ApiWeAreWeAre;

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_hero_we_ares",
+  "info": {
+    "displayName": "Hero - We Are"
+  },
+  "options": {},
+  "attributes": {
+    "titleSmall": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "bgImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

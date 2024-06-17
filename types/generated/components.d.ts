@@ -51,6 +51,18 @@ export interface BlocksHeroCentered extends Schema.Component {
   };
 }
 
+export interface BlocksHeroWeAre extends Schema.Component {
+  collectionName: 'components_blocks_hero_we_ares';
+  info: {
+    displayName: 'Hero - We Are';
+  };
+  attributes: {
+    titleSmall: Attribute.String;
+    heading: Attribute.String;
+    bgImage: Attribute.Media;
+  };
+}
+
 export interface BlocksHero extends Schema.Component {
   collectionName: 'components_blocks_heroes';
   info: {
@@ -95,6 +107,22 @@ export interface BlocksLeftImageAndInfo extends Schema.Component {
   };
 }
 
+export interface BlocksMIntHrmNumbers extends Schema.Component {
+  collectionName: 'components_blocks_m_int_hrm_numbers';
+  info: {
+    displayName: 'MIntHrm Numbers';
+    icon: 'clock';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Text;
+    mintNumbers: Attribute.Component<'elements.mint-number-item', true>;
+    bgColor: Attribute.String;
+    backDrop: Attribute.Media;
+  };
+}
+
 export interface BlocksNewsLetterSubscribe extends Schema.Component {
   collectionName: 'components_blocks_news_letter_subscribes';
   info: {
@@ -105,6 +133,32 @@ export interface BlocksNewsLetterSubscribe extends Schema.Component {
     description: Attribute.Text;
     formButton: Attribute.Component<'elements.button-link'>;
     sectionBackdrop: Attribute.Media;
+  };
+}
+
+export interface BlocksOurKeyClients extends Schema.Component {
+  collectionName: 'components_blocks_our_key_clients';
+  info: {
+    displayName: 'Our Key Clients';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Text;
+    logos: Attribute.Media;
+    bgColor: Attribute.String;
+    grid: Attribute.Integer;
+  };
+}
+
+export interface BlocksProductItemSectionBlock extends Schema.Component {
+  collectionName: 'components_blocks_product_item_section_blocks';
+  info: {
+    displayName: 'Product Item Section Block';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.Text;
   };
 }
 
@@ -217,6 +271,18 @@ export interface ElementsListItem extends Schema.Component {
   };
 }
 
+export interface ElementsMintNumberItem extends Schema.Component {
+  collectionName: 'components_elements_mint_number_items';
+  info: {
+    displayName: 'mintNumberItem';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    number: Attribute.String;
+  };
+}
+
 export interface ElementsSliderItem extends Schema.Component {
   collectionName: 'components_elements_slider_items';
   info: {
@@ -291,10 +357,14 @@ declare module '@strapi/types' {
       'blocks.centered-text-desc-bg-image': BlocksCenteredTextDescBgImage;
       'blocks.cta-section': BlocksCtaSection;
       'blocks.hero-centered': BlocksHeroCentered;
+      'blocks.hero-we-are': BlocksHeroWeAre;
       'blocks.hero': BlocksHero;
       'blocks.image-with-accordian': BlocksImageWithAccordian;
       'blocks.left-image-and-info': BlocksLeftImageAndInfo;
+      'blocks.m-int-hrm-numbers': BlocksMIntHrmNumbers;
       'blocks.news-letter-subscribe': BlocksNewsLetterSubscribe;
+      'blocks.our-key-clients': BlocksOurKeyClients;
+      'blocks.product-item-section-block': BlocksProductItemSectionBlock;
       'blocks.shedule-a-demo': BlocksSheduleADemo;
       'blocks.tabs-with-info': BlocksTabsWithInfo;
       'blocks.trusted-companies': BlocksTrustedCompanies;
@@ -304,6 +374,7 @@ declare module '@strapi/types' {
       'elements.demo-form': ElementsDemoForm;
       'elements.footer-menu-col': ElementsFooterMenuCol;
       'elements.list-item': ElementsListItem;
+      'elements.mint-number-item': ElementsMintNumberItem;
       'elements.slider-item': ElementsSliderItem;
       'elements.social-icon-item': ElementsSocialIconItem;
       'elements.tab-item': ElementsTabItem;

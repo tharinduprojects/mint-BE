@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "demo_and_newsletters",
+  "info": {
+    "singularName": "demo-and-newsletter",
+    "pluralName": "demo-and-newsletters",
+    "displayName": "Demo and Newsletter"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "demo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.shedule-a-demo"
+    },
+    "newsLetter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.news-letter-subscribe"
+    }
+  }
+}
