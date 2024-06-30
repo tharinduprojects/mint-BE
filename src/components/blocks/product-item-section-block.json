@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blocks_product_item_section_blocks",
   "info": {
-    "displayName": "Product Item Section Block"
+    "displayName": "Product Item Section Block",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,6 +11,33 @@
     },
     "Description": {
       "type": "text"
+    },
+    "feature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list-item"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "bgColor": {
+      "type": "string"
+    },
+    "leftMedia": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

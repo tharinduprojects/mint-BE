@@ -29,11 +29,15 @@
       "type": "string"
     },
     "backDrop": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "bgColor": {
+      "type": "string"
     }
   }
 }

@@ -76,6 +76,7 @@ export interface BlocksHero extends Schema.Component {
     image: Attribute.Media;
     author: Attribute.String;
     backDrop: Attribute.Media;
+    bgColor: Attribute.String;
   };
 }
 
@@ -155,10 +156,16 @@ export interface BlocksProductItemSectionBlock extends Schema.Component {
   collectionName: 'components_blocks_product_item_section_blocks';
   info: {
     displayName: 'Product Item Section Block';
+    description: '';
   };
   attributes: {
     Title: Attribute.String;
     Description: Attribute.Text;
+    feature: Attribute.Component<'elements.list-item', true>;
+    cta: Attribute.Component<'elements.button-link'>;
+    media: Attribute.Media;
+    bgColor: Attribute.String;
+    leftMedia: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 

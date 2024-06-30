@@ -899,6 +899,78 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiProductProduct extends Schema.CollectionType {
+  collectionName: 'products';
+  info: {
+    singularName: 'product';
+    pluralName: 'products';
+    displayName: 'Product';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageTitle: Attribute.String;
+    description: Attribute.Text;
+    slug: Attribute.UID<'api::product.product', 'pageTitle'>;
+    metaData: Attribute.Component<'seo.meta-data'>;
+    blocks: Attribute.DynamicZone<
+      [
+        'blocks.hero',
+        'blocks.trusted-companies',
+        'blocks.product-item-section-block'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTrustedCommonLogoTrustedCommonLogo
+  extends Schema.SingleType {
+  collectionName: 'trusted_common_logos';
+  info: {
+    singularName: 'trusted-common-logo';
+    pluralName: 'trusted-common-logos';
+    displayName: 'trustedCommonLogo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    trustedCompanies: Attribute.Component<'blocks.trusted-companies'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::trusted-common-logo.trusted-common-logo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::trusted-common-logo.trusted-common-logo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWeAreWeAre extends Schema.CollectionType {
   collectionName: 'we_ares';
   info: {
@@ -972,6 +1044,8 @@ declare module '@strapi/types' {
       'api::demo-and-newsletter.demo-and-newsletter': ApiDemoAndNewsletterDemoAndNewsletter;
       'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::product.product': ApiProductProduct;
+      'api::trusted-common-logo.trusted-common-logo': ApiTrustedCommonLogoTrustedCommonLogo;
       'api::we-are.we-are': ApiWeAreWeAre;
     }
   }
