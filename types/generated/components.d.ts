@@ -159,8 +159,8 @@ export interface BlocksProductItemSectionBlock extends Schema.Component {
     description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    Description: Attribute.Text;
+    title: Attribute.String;
+    description: Attribute.Text;
     feature: Attribute.Component<'elements.list-item', true>;
     cta: Attribute.Component<'elements.button-link'>;
     media: Attribute.Media;
