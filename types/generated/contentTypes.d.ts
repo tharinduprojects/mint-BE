@@ -788,6 +788,38 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiBestPlaceToWorkCaraouselBestPlaceToWorkCaraousel
+  extends Schema.SingleType {
+  collectionName: 'best_place_to_work_caraousels';
+  info: {
+    singularName: 'best-place-to-work-caraousel';
+    pluralName: 'best-place-to-work-caraousels';
+    displayName: 'Best Place to Work Caraousel';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bestPlaceCaraousel: Attribute.Component<'blocks.best-place-caraousel'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::best-place-to-work-caraousel.best-place-to-work-caraousel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::best-place-to-work-caraousel.best-place-to-work-caraousel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiDemoAndNewsletterDemoAndNewsletter
   extends Schema.SingleType {
   collectionName: 'demo_and_newsletters';
@@ -1041,6 +1073,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::best-place-to-work-caraousel.best-place-to-work-caraousel': ApiBestPlaceToWorkCaraouselBestPlaceToWorkCaraousel;
       'api::demo-and-newsletter.demo-and-newsletter': ApiDemoAndNewsletterDemoAndNewsletter;
       'api::footer.footer': ApiFooterFooter;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;

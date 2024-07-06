@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "best_place_to_work_caraousels",
+  "info": {
+    "singularName": "best-place-to-work-caraousel",
+    "pluralName": "best-place-to-work-caraousels",
+    "displayName": "Best Place to Work Caraousel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bestPlaceCaraousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.best-place-caraousel"
+    }
+  }
+}
