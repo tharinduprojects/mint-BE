@@ -39,6 +39,10 @@
     "leftMedia": {
       "type": "boolean",
       "default": false
+    },
+    "isFullWidth": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

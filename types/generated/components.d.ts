@@ -166,6 +166,7 @@ export interface BlocksProductItemSectionBlock extends Schema.Component {
     media: Attribute.Media;
     bgColor: Attribute.String;
     leftMedia: Attribute.Boolean & Attribute.DefaultTo<false>;
+    isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
