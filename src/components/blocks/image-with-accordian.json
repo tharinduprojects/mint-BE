@@ -13,16 +13,24 @@
       "type": "text"
     },
     "sectionImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "accordianItem": {
       "type": "component",
       "repeatable": true,
       "component": "elements.accordion-item"
+    },
+    "isFullWidth": {
+      "type": "boolean",
+      "default": true
+    },
+    "bgColor": {
+      "type": "string"
     }
   }
 }

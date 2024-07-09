@@ -91,6 +91,8 @@ export interface BlocksImageWithAccordian extends Schema.Component {
     sectionDescription: Attribute.Text;
     sectionImage: Attribute.Media;
     accordianItem: Attribute.Component<'elements.accordion-item', true>;
+    isFullWidth: Attribute.Boolean & Attribute.DefaultTo<true>;
+    bgColor: Attribute.String;
   };
 }
 
