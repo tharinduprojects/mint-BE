@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_blocks_product_item_centered_section_blocks",
+  "info": {
+    "displayName": "Product Item Centered Section Block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button-link"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "backdrop": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bgColor": {
+      "type": "string"
+    },
+    "isFullWidth": {
+      "type": "boolean",
+      "default": false
+    },
+    "textColor": {
+      "type": "string"
+    }
+  }
+}

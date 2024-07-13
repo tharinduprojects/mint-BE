@@ -952,7 +952,8 @@ export interface ApiProductProduct extends Schema.CollectionType {
         'blocks.hero',
         'blocks.trusted-companies',
         'blocks.product-item-section-block',
-        'blocks.image-with-accordian'
+        'blocks.image-with-accordian',
+        'blocks.product-item-centered-section-block'
       ]
     >;
     createdAt: Attribute.DateTime;

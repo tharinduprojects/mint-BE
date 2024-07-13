@@ -93,6 +93,10 @@ export interface BlocksImageWithAccordian extends Schema.Component {
     accordianItem: Attribute.Component<'elements.accordion-item', true>;
     isFullWidth: Attribute.Boolean & Attribute.DefaultTo<true>;
     bgColor: Attribute.String;
+    isRightMedia: Attribute.Boolean & Attribute.DefaultTo<false>;
+    backDrop: Attribute.Media;
+    textColor: Attribute.String;
+    mediaCss: Attribute.Text;
   };
 }
 
@@ -151,6 +155,25 @@ export interface BlocksOurKeyClients extends Schema.Component {
     logos: Attribute.Media;
     bgColor: Attribute.String;
     grid: Attribute.Integer;
+  };
+}
+
+export interface BlocksProductItemCenteredSectionBlock
+  extends Schema.Component {
+  collectionName: 'components_blocks_product_item_centered_section_blocks';
+  info: {
+    displayName: 'Product Item Centered Section Block';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Text;
+    cta: Attribute.Component<'elements.button-link'>;
+    media: Attribute.Media;
+    backdrop: Attribute.Media;
+    bgColor: Attribute.String;
+    isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
+    textColor: Attribute.String;
   };
 }
 
@@ -374,6 +397,7 @@ declare module '@strapi/types' {
       'blocks.m-int-hrm-numbers': BlocksMIntHrmNumbers;
       'blocks.news-letter-subscribe': BlocksNewsLetterSubscribe;
       'blocks.our-key-clients': BlocksOurKeyClients;
+      'blocks.product-item-centered-section-block': BlocksProductItemCenteredSectionBlock;
       'blocks.product-item-section-block': BlocksProductItemSectionBlock;
       'blocks.shedule-a-demo': BlocksSheduleADemo;
       'blocks.tabs-with-info': BlocksTabsWithInfo;
