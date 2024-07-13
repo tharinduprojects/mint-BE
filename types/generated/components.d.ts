@@ -162,7 +162,7 @@ export interface BlocksProductItemCenteredSectionBlock
   extends Schema.Component {
   collectionName: 'components_blocks_product_item_centered_section_blocks';
   info: {
-    displayName: 'Product Item Centered Section Block';
+    displayName: 'Product Block Centered';
     description: '';
   };
   attributes: {
@@ -180,7 +180,7 @@ export interface BlocksProductItemCenteredSectionBlock
 export interface BlocksProductItemSectionBlock extends Schema.Component {
   collectionName: 'components_blocks_product_item_section_blocks';
   info: {
-    displayName: 'Product Item Section Block';
+    displayName: 'Product Block';
     description: '';
   };
   attributes: {
