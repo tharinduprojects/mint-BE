@@ -953,7 +953,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
         'blocks.trusted-companies',
         'blocks.product-item-section-block',
         'blocks.image-with-accordian',
-        'blocks.product-item-centered-section-block'
+        'blocks.s-product-centered'
       ]
     >;
     createdAt: Attribute.DateTime;
