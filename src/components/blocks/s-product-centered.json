@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_blocks_product_item_centered_section_blocks",
+  "collectionName": "components_blocks_s_product_centereds",
   "info": {
-    "displayName": "Product Block Centered",
-    "description": ""
+    "displayName": "S-Product Centered"
   },
   "options": {},
   "attributes": {

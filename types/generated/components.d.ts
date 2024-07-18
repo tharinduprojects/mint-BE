@@ -158,25 +158,6 @@ export interface BlocksOurKeyClients extends Schema.Component {
   };
 }
 
-export interface BlocksProductItemCenteredSectionBlock
-  extends Schema.Component {
-  collectionName: 'components_blocks_product_item_centered_section_blocks';
-  info: {
-    displayName: 'Product Block Centered';
-    description: '';
-  };
-  attributes: {
-    heading: Attribute.String;
-    description: Attribute.Text;
-    cta: Attribute.Component<'elements.button-link'>;
-    media: Attribute.Media;
-    backdrop: Attribute.Media;
-    bgColor: Attribute.String;
-    isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
-    textColor: Attribute.String;
-  };
-}
-
 export interface BlocksProductItemSectionBlock extends Schema.Component {
   collectionName: 'components_blocks_product_item_section_blocks';
   info: {
@@ -192,6 +173,23 @@ export interface BlocksProductItemSectionBlock extends Schema.Component {
     bgColor: Attribute.String;
     leftMedia: Attribute.Boolean & Attribute.DefaultTo<false>;
     isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
+export interface BlocksSProductCentered extends Schema.Component {
+  collectionName: 'components_blocks_s_product_centereds';
+  info: {
+    displayName: 'S-Product Centered';
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Text;
+    cta: Attribute.Component<'elements.button-link'>;
+    media: Attribute.Media;
+    backdrop: Attribute.Media;
+    bgColor: Attribute.String;
+    isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
+    textColor: Attribute.String;
   };
 }
 
@@ -397,8 +395,8 @@ declare module '@strapi/types' {
       'blocks.m-int-hrm-numbers': BlocksMIntHrmNumbers;
       'blocks.news-letter-subscribe': BlocksNewsLetterSubscribe;
       'blocks.our-key-clients': BlocksOurKeyClients;
-      'blocks.product-item-centered-section-block': BlocksProductItemCenteredSectionBlock;
       'blocks.product-item-section-block': BlocksProductItemSectionBlock;
+      'blocks.s-product-centered': BlocksSProductCentered;
       'blocks.shedule-a-demo': BlocksSheduleADemo;
       'blocks.tabs-with-info': BlocksTabsWithInfo;
       'blocks.trusted-companies': BlocksTrustedCompanies;
