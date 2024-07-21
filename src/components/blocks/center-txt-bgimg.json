@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_center_txt_bgimgs",
+  "info": {
+    "displayName": "center-txt-bgimg"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backDrop": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "bgColor": {
+      "type": "string"
+    }
+  }
+}

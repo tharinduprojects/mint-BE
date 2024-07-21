@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_blocks_product_item_section_blocks",
+  "collectionName": "components_blocks_s_product_lrs",
   "info": {
-    "displayName": "Product Block",
-    "description": ""
+    "displayName": "s-product-LR"
   },
   "options": {},
   "attributes": {

@@ -32,9 +32,9 @@
       "components": [
         "blocks.hero",
         "blocks.trusted-companies",
-        "blocks.product-item-section-block",
         "blocks.image-with-accordian",
-        "blocks.s-product-centered"
+        "blocks.s-product-centered",
+        "blocks.s-product-lr"
       ]
     }
   }
