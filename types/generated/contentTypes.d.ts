@@ -951,9 +951,9 @@ export interface ApiProductProduct extends Schema.CollectionType {
       [
         'blocks.hero',
         'blocks.trusted-companies',
-        'blocks.product-item-section-block',
         'blocks.image-with-accordian',
-        'blocks.s-product-centered'
+        'blocks.s-product-centered',
+        'blocks.s-product-lr'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -1024,7 +1024,6 @@ export interface ApiWeAreWeAre extends Schema.CollectionType {
     Blocks: Attribute.DynamicZone<
       [
         'blocks.best-place-caraousel',
-        'blocks.centered-text-desc-bg-image',
         'blocks.cta-section',
         'blocks.hero-centered',
         'blocks.hero',
@@ -1036,7 +1035,8 @@ export interface ApiWeAreWeAre extends Schema.CollectionType {
         'blocks.trusted-companies',
         'blocks.our-key-clients',
         'blocks.hero-we-are',
-        'blocks.m-int-hrm-numbers'
+        'blocks.m-int-hrm-numbers',
+        'blocks.center-txt-bgimg'
       ]
     >;
     createdAt: Attribute.DateTime;

@@ -14,6 +14,19 @@ export interface BlocksBestPlaceCaraousel extends Schema.Component {
   };
 }
 
+export interface BlocksCenterTxtBgimg extends Schema.Component {
+  collectionName: 'components_blocks_center_txt_bgimgs';
+  info: {
+    displayName: 'center-txt-bgimg';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    backDrop: Attribute.Media;
+    bgColor: Attribute.String;
+  };
+}
+
 export interface BlocksCenteredTextDescBgImage extends Schema.Component {
   collectionName: 'components_blocks_centered_text_desc_bg_images';
   info: {
@@ -158,24 +171,6 @@ export interface BlocksOurKeyClients extends Schema.Component {
   };
 }
 
-export interface BlocksProductItemSectionBlock extends Schema.Component {
-  collectionName: 'components_blocks_product_item_section_blocks';
-  info: {
-    displayName: 'Product Block';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    feature: Attribute.Component<'elements.list-item', true>;
-    cta: Attribute.Component<'elements.button-link'>;
-    media: Attribute.Media;
-    bgColor: Attribute.String;
-    leftMedia: Attribute.Boolean & Attribute.DefaultTo<false>;
-    isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
-  };
-}
-
 export interface BlocksSProductCentered extends Schema.Component {
   collectionName: 'components_blocks_s_product_centereds';
   info: {
@@ -190,6 +185,23 @@ export interface BlocksSProductCentered extends Schema.Component {
     bgColor: Attribute.String;
     isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
     textColor: Attribute.String;
+  };
+}
+
+export interface BlocksSProductLr extends Schema.Component {
+  collectionName: 'components_blocks_s_product_lrs';
+  info: {
+    displayName: 's-product-LR';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    feature: Attribute.Component<'elements.list-item', true>;
+    cta: Attribute.Component<'elements.button-link'>;
+    media: Attribute.Media;
+    bgColor: Attribute.String;
+    leftMedia: Attribute.Boolean & Attribute.DefaultTo<false>;
+    isFullWidth: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -385,6 +397,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'blocks.best-place-caraousel': BlocksBestPlaceCaraousel;
+      'blocks.center-txt-bgimg': BlocksCenterTxtBgimg;
       'blocks.centered-text-desc-bg-image': BlocksCenteredTextDescBgImage;
       'blocks.cta-section': BlocksCtaSection;
       'blocks.hero-centered': BlocksHeroCentered;
@@ -395,8 +408,8 @@ declare module '@strapi/types' {
       'blocks.m-int-hrm-numbers': BlocksMIntHrmNumbers;
       'blocks.news-letter-subscribe': BlocksNewsLetterSubscribe;
       'blocks.our-key-clients': BlocksOurKeyClients;
-      'blocks.product-item-section-block': BlocksProductItemSectionBlock;
       'blocks.s-product-centered': BlocksSProductCentered;
+      'blocks.s-product-lr': BlocksSProductLr;
       'blocks.shedule-a-demo': BlocksSheduleADemo;
       'blocks.tabs-with-info': BlocksTabsWithInfo;
       'blocks.trusted-companies': BlocksTrustedCompanies;
