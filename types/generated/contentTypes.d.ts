@@ -884,6 +884,41 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiGetInTouchGetInTouch extends Schema.CollectionType {
+  collectionName: 'get_in_touches';
+  info: {
+    singularName: 'get-in-touch';
+    pluralName: 'get-in-touches';
+    displayName: 'Get In Touch';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    slug: Attribute.UID<'api::get-in-touch.get-in-touch', 'title'>;
+    metaData: Attribute.Component<'seo.meta-data', true>;
+    Bloks: Attribute.DynamicZone<['blocks.hero', 'blocks.contact-options']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::get-in-touch.get-in-touch',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::get-in-touch.get-in-touch',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Schema.CollectionType {
   collectionName: 'landing_pages';
   info: {
@@ -1078,6 +1113,7 @@ declare module '@strapi/types' {
       'api::best-place-to-work-caraousel.best-place-to-work-caraousel': ApiBestPlaceToWorkCaraouselBestPlaceToWorkCaraousel;
       'api::demo-and-newsletter.demo-and-newsletter': ApiDemoAndNewsletterDemoAndNewsletter;
       'api::footer.footer': ApiFooterFooter;
+      'api::get-in-touch.get-in-touch': ApiGetInTouchGetInTouch;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::product.product': ApiProductProduct;
       'api::trusted-common-logo.trusted-common-logo': ApiTrustedCommonLogoTrustedCommonLogo;

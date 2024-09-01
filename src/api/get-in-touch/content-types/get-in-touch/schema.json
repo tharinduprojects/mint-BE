@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "get_in_touches",
+  "info": {
+    "singularName": "get-in-touch",
+    "pluralName": "get-in-touches",
+    "displayName": "Get In Touch",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "metaData": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.meta-data"
+    },
+    "Bloks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.hero",
+        "blocks.contact-options"
+      ]
+    }
+  }
+}

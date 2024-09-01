@@ -40,6 +40,18 @@ export interface BlocksCenteredTextDescBgImage extends Schema.Component {
   };
 }
 
+export interface BlocksContactOptions extends Schema.Component {
+  collectionName: 'components_blocks_contact_options';
+  info: {
+    displayName: 'Contact Options';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.Text;
+    contactRow: Attribute.Component<'elements.contact-row', true>;
+  };
+}
+
 export interface BlocksCtaSection extends Schema.Component {
   collectionName: 'components_blocks_cta_sections';
   info: {
@@ -278,6 +290,32 @@ export interface ElementsButtonLink extends Schema.Component {
   };
 }
 
+export interface ElementsContactItem extends Schema.Component {
+  collectionName: 'components_elements_contact_items';
+  info: {
+    displayName: 'Contact Item';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.String;
+    email: Attribute.Email;
+  };
+}
+
+export interface ElementsContactRow extends Schema.Component {
+  collectionName: 'components_elements_contact_rows';
+  info: {
+    displayName: 'Contact Row';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    item: Attribute.Component<'elements.contact-item', true>;
+  };
+}
+
 export interface ElementsDemoForm extends Schema.Component {
   collectionName: 'components_elements_demo_forms';
   info: {
@@ -399,6 +437,7 @@ declare module '@strapi/types' {
       'blocks.best-place-caraousel': BlocksBestPlaceCaraousel;
       'blocks.center-txt-bgimg': BlocksCenterTxtBgimg;
       'blocks.centered-text-desc-bg-image': BlocksCenteredTextDescBgImage;
+      'blocks.contact-options': BlocksContactOptions;
       'blocks.cta-section': BlocksCtaSection;
       'blocks.hero-centered': BlocksHeroCentered;
       'blocks.hero-we-are': BlocksHeroWeAre;
@@ -416,6 +455,8 @@ declare module '@strapi/types' {
       'common.footer': CommonFooter;
       'elements.accordion-item': ElementsAccordionItem;
       'elements.button-link': ElementsButtonLink;
+      'elements.contact-item': ElementsContactItem;
+      'elements.contact-row': ElementsContactRow;
       'elements.demo-form': ElementsDemoForm;
       'elements.footer-menu-col': ElementsFooterMenuCol;
       'elements.list-item': ElementsListItem;

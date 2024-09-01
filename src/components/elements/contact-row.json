@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_contact_rows",
+  "info": {
+    "displayName": "Contact Row",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.contact-item"
+    }
+  }
+}
