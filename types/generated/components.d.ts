@@ -301,6 +301,9 @@ export interface ElementsContactItem extends Schema.Component {
     title: Attribute.String;
     description: Attribute.String;
     email: Attribute.Email;
+    address: Attribute.Text;
+    phoneNo: Attribute.String;
+    socialItem: Attribute.Component<'elements.social-icon-item', true>;
   };
 }
 

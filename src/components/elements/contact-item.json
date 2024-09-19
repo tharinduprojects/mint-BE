@@ -7,11 +7,12 @@
   "options": {},
   "attributes": {
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
       "type": "string"
@@ -21,6 +22,17 @@
     },
     "email": {
       "type": "email"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phoneNo": {
+      "type": "string"
+    },
+    "socialItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.social-icon-item"
     }
   }
 }
