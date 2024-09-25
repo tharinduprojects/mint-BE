@@ -1,7 +1,8 @@
 {
   "collectionName": "components_elements_nav_menu_items",
   "info": {
-    "displayName": "navMenuItem"
+    "displayName": "navMenuItem",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -12,15 +13,19 @@
       "type": "string"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "isExtrenal": {
       "type": "boolean",
       "default": false
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
