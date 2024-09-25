@@ -966,6 +966,38 @@ export interface ApiLandingPageLandingPage extends Schema.CollectionType {
   };
 }
 
+export interface ApiNavigationMenuNavigationMenu extends Schema.SingleType {
+  collectionName: 'navigation_menus';
+  info: {
+    singularName: 'navigation-menu';
+    pluralName: 'navigation-menus';
+    displayName: 'Navigation Menu';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Navmenu: Attribute.String;
+    nav: Attribute.Component<'elements.nav-menu-item', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::navigation-menu.navigation-menu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::navigation-menu.navigation-menu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Schema.CollectionType {
   collectionName: 'products';
   info: {
@@ -1115,6 +1147,7 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::get-in-touch.get-in-touch': ApiGetInTouchGetInTouch;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::navigation-menu.navigation-menu': ApiNavigationMenuNavigationMenu;
       'api::product.product': ApiProductProduct;
       'api::trusted-common-logo.trusted-common-logo': ApiTrustedCommonLogoTrustedCommonLogo;
       'api::we-are.we-are': ApiWeAreWeAre;

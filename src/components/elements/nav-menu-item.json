@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_nav_menu_items",
+  "info": {
+    "displayName": "navMenuItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "isExtrenal": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
