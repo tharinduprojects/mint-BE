@@ -367,6 +367,19 @@ export interface ElementsMintNumberItem extends Schema.Component {
   };
 }
 
+export interface ElementsNavMenuItem extends Schema.Component {
+  collectionName: 'components_elements_nav_menu_items';
+  info: {
+    displayName: 'navMenuItem';
+  };
+  attributes: {
+    title: Attribute.String;
+    link: Attribute.String;
+    icon: Attribute.Media;
+    isExtrenal: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ElementsSliderItem extends Schema.Component {
   collectionName: 'components_elements_slider_items';
   info: {
@@ -464,6 +477,7 @@ declare module '@strapi/types' {
       'elements.footer-menu-col': ElementsFooterMenuCol;
       'elements.list-item': ElementsListItem;
       'elements.mint-number-item': ElementsMintNumberItem;
+      'elements.nav-menu-item': ElementsNavMenuItem;
       'elements.slider-item': ElementsSliderItem;
       'elements.social-icon-item': ElementsSocialIconItem;
       'elements.tab-item': ElementsTabItem;
