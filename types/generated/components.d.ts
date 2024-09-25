@@ -371,12 +371,14 @@ export interface ElementsNavMenuItem extends Schema.Component {
   collectionName: 'components_elements_nav_menu_items';
   info: {
     displayName: 'navMenuItem';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     link: Attribute.String;
     icon: Attribute.Media;
     isExtrenal: Attribute.Boolean & Attribute.DefaultTo<false>;
+    description: Attribute.Text;
   };
 }
 
