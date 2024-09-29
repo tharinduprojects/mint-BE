@@ -1124,6 +1124,42 @@ export interface ApiWeAreWeAre extends Schema.CollectionType {
   };
 }
 
+export interface ApiWhyMintWhyMint extends Schema.CollectionType {
+  collectionName: 'why_mints';
+  info: {
+    singularName: 'why-mint';
+    pluralName: 'why-mints';
+    displayName: 'Why Mint';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    slug: Attribute.UID;
+    metaData: Attribute.Component<'seo.meta-data'>;
+    blocks: Attribute.DynamicZone<
+      ['blocks.hero', 'blocks.cta-section', 'blocks.s-product-lr']
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::why-mint.why-mint',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::why-mint.why-mint',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1151,6 +1187,7 @@ declare module '@strapi/types' {
       'api::product.product': ApiProductProduct;
       'api::trusted-common-logo.trusted-common-logo': ApiTrustedCommonLogoTrustedCommonLogo;
       'api::we-are.we-are': ApiWeAreWeAre;
+      'api::why-mint.why-mint': ApiWhyMintWhyMint;
     }
   }
 }
