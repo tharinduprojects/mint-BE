@@ -287,6 +287,7 @@ export interface ElementsButtonLink extends Schema.Component {
     isExternal: Attribute.Boolean & Attribute.DefaultTo<false>;
     trype: Attribute.Enumeration<['PRIMARY', 'SECONDARY']>;
     size: Attribute.Enumeration<['lg', 'sm']> & Attribute.DefaultTo<'lg'>;
+    dialogAction: Attribute.String;
   };
 }
 

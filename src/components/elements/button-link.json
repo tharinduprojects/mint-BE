@@ -30,6 +30,9 @@
         "sm"
       ],
       "default": "lg"
+    },
+    "dialogAction": {
+      "type": "string"
     }
   }
 }
