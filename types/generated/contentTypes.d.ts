@@ -1057,6 +1057,9 @@ export interface ApiTermsAndConditionTermsAndCondition
     Title: Attribute.String;
     contentRichBlocks: Attribute.Blocks;
     RichTextMd: Attribute.RichText;
+    heroTitle: Attribute.String;
+    heroImage: Attribute.Media;
+    heroBgColor: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -20,6 +20,19 @@
     },
     "RichTextMd": {
       "type": "richtext"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "heroBgColor": {
+      "type": "string"
     }
   }
 }
