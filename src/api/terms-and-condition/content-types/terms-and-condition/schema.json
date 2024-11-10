@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "terms_and_conditions",
+  "info": {
+    "singularName": "terms-and-condition",
+    "pluralName": "terms-and-conditions",
+    "displayName": "Terms and Condition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "contentRichBlocks": {
+      "type": "blocks"
+    },
+    "RichTextMd": {
+      "type": "richtext"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "heroBgColor": {
+      "type": "string"
+    }
+  }
+}

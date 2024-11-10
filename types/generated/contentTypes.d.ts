@@ -1041,6 +1041,43 @@ export interface ApiProductProduct extends Schema.CollectionType {
   };
 }
 
+export interface ApiTermsAndConditionTermsAndCondition
+  extends Schema.CollectionType {
+  collectionName: 'terms_and_conditions';
+  info: {
+    singularName: 'terms-and-condition';
+    pluralName: 'terms-and-conditions';
+    displayName: 'Terms and Condition';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    contentRichBlocks: Attribute.Blocks;
+    RichTextMd: Attribute.RichText;
+    heroTitle: Attribute.String;
+    heroImage: Attribute.Media;
+    heroBgColor: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::terms-and-condition.terms-and-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::terms-and-condition.terms-and-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTrustedCommonLogoTrustedCommonLogo
   extends Schema.SingleType {
   collectionName: 'trusted_common_logos';
@@ -1185,6 +1222,7 @@ declare module '@strapi/types' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::navigation-menu.navigation-menu': ApiNavigationMenuNavigationMenu;
       'api::product.product': ApiProductProduct;
+      'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'api::trusted-common-logo.trusted-common-logo': ApiTrustedCommonLogoTrustedCommonLogo;
       'api::we-are.we-are': ApiWeAreWeAre;
       'api::why-mint.why-mint': ApiWhyMintWhyMint;
